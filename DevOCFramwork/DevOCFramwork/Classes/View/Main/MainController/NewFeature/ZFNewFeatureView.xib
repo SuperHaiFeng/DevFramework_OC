@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZFNewFeatureView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-YJ-xXv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="j24-Xd-hwd">
+                    <rect key="frame" x="160" y="563" width="55" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.53558332200000003" blue="0.087607560210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-Ua-u2o">
+                    <rect key="frame" x="111.5" y="518" width="152" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="152" id="7zE-Lm-RAN"/>
+                        <constraint firstAttribute="height" constant="37" id="oh2-gx-42e"/>
+                    </constraints>
+                    <state key="normal" title="进入" backgroundImage="navigationbar_background"/>
+                    <connections>
+                        <action selector="enterStatus:" destination="iN0-l3-epB" eventType="touchUpInside" id="a7m-hk-tCK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Upd-YJ-xXv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="C2W-D8-cNr"/>
+                <constraint firstItem="j24-Xd-hwd" firstAttribute="top" secondItem="gaB-Ua-u2o" secondAttribute="bottom" constant="8" id="Gbp-XU-8lr"/>
+                <constraint firstItem="Upd-YJ-xXv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tmw-aQ-paR"/>
+                <constraint firstItem="j24-Xd-hwd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bBH-4r-Ax0"/>
+                <constraint firstItem="Upd-YJ-xXv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gAG-gL-YcW"/>
+                <constraint firstItem="Upd-YJ-xXv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="kLk-Nc-BRv"/>
+                <constraint firstItem="gaB-Ua-u2o" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mdK-Ts-8Wk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="j24-Xd-hwd" secondAttribute="bottom" constant="67" id="rMg-rC-8RI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="enterButton" destination="gaB-Ua-u2o" id="NBO-4I-Cia"/>
+                <outlet property="pageCotrol" destination="j24-Xd-hwd" id="d73-fw-F21"/>
+                <outlet property="scrollView" destination="Upd-YJ-xXv" id="Qzp-HA-EXh"/>
+            </connections>
+            <point key="canvasLocation" x="81.5" y="43.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="navigationbar_background" width="750" height="138"/>
+    </resources>
+</document>

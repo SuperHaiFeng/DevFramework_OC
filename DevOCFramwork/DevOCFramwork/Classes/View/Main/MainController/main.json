@@ -1,0 +1,25 @@
+[
+  {
+    "clsName" : "ZFHomeViewController",
+    "title" : "首页",
+    "imageName" : "firstPage"
+  },
+  {
+    "clsName" : "ZFMessageViewController",
+    "title" : "信息",
+    "imageName" : "subject"
+  },
+  {
+    "clsName" : ""
+  },
+  {
+    "clsName" : "ZFDiscoveryViewController",
+    "title" : "发现",
+    "imageName" : "teacher"
+  },
+  {
+    "clsName" : "ZFProfileViewController",
+    "title" : "我",
+    "imageName" : "me"
+  }
+]
